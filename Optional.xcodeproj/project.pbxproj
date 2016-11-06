@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8F8C21D61DCF3F3500E7DBD9 /* Optional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8C21CC1DCF3F3500E7DBD9 /* Optional.framework */; };
-		8F8C21DB1DCF3F3500E7DBD9 /* OptionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8C21DA1DCF3F3500E7DBD9 /* OptionalTests.swift */; };
 		8F8C21DD1DCF3F3500E7DBD9 /* Optional.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F8C21CF1DCF3F3500E7DBD9 /* Optional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F8C21E71DCF3F4700E7DBD9 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8C21E61DCF3F4700E7DBD9 /* Comparable.swift */; };
+		8F8C21EB1DCF438400E7DBD9 /* ComparableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8C21EA1DCF438400E7DBD9 /* ComparableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,10 @@
 		8F8C21CF1DCF3F3500E7DBD9 /* Optional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Optional.h; sourceTree = "<group>"; };
 		8F8C21D01DCF3F3500E7DBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F8C21D51DCF3F3500E7DBD9 /* OptionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F8C21DA1DCF3F3500E7DBD9 /* OptionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalTests.swift; sourceTree = "<group>"; };
 		8F8C21DC1DCF3F3500E7DBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8C21E61DCF3F4700E7DBD9 /* Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
+		8F8C21EA1DCF438400E7DBD9 /* ComparableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparableTests.swift; sourceTree = "<group>"; };
+		8F8C21EE1DCF47AF00E7DBD9 /* Equatable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Equatable.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 			children = (
 				8F8C21CF1DCF3F3500E7DBD9 /* Optional.h */,
 				8F8C21D01DCF3F3500E7DBD9 /* Info.plist */,
+				8F8C21E61DCF3F4700E7DBD9 /* Comparable.swift */,
+				8F8C21EE1DCF47AF00E7DBD9 /* Equatable.playground */,
 			);
 			path = Optional;
 			sourceTree = "<group>";
@@ -80,7 +85,7 @@
 		8F8C21D91DCF3F3500E7DBD9 /* OptionalTests */ = {
 			isa = PBXGroup;
 			children = (
-				8F8C21DA1DCF3F3500E7DBD9 /* OptionalTests.swift */,
+				8F8C21EA1DCF438400E7DBD9 /* ComparableTests.swift */,
 				8F8C21DC1DCF3F3500E7DBD9 /* Info.plist */,
 			);
 			path = OptionalTests;
@@ -149,6 +154,7 @@
 					8F8C21CB1DCF3F3500E7DBD9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9HQR3Y4WE5;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					8F8C21D41DCF3F3500E7DBD9 = {
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8C21E71DCF3F4700E7DBD9 /* Comparable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8C21DB1DCF3F3500E7DBD9 /* OptionalTests.swift in Sources */,
+				8F8C21EB1DCF438400E7DBD9 /* ComparableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +329,7 @@
 		8F8C21E11DCF3F3500E7DBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
@@ -334,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Optional";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +350,7 @@
 		8F8C21E21DCF3F3500E7DBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
@@ -360,6 +370,7 @@
 		8F8C21E41DCF3F3500E7DBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
 				INFOPLIST_FILE = OptionalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +383,7 @@
 		8F8C21E51DCF3F3500E7DBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9HQR3Y4WE5;
 				INFOPLIST_FILE = OptionalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
